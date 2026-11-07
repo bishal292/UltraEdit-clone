@@ -2,6 +2,23 @@
     width: 164px;
 }
 
+.brand-mark {
+    color: #141b34;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.preview-label {
+    padding: 6px 10px;
+    border: 1px solid #00b6d1;
+    border-radius: 6px;
+    color: #087c8e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -39,6 +56,10 @@ nav {
     font-size: 40px;
 }
 
+.first .product-title {
+    text-align: center;
+}
+
 section span img {
     width: 82px;
     margin: 0 23px;
@@ -67,6 +88,30 @@ section span img {
     color: white;
 }
 
+.first p.demo-disclaimer {
+    width: min(850px, 85vw);
+    margin: 8px auto 0;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    border-left: 4px solid #00b6d1;
+    border-radius: 4px;
+    background: #eaf9fb;
+    color: #173c43;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.product-mark {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 10px;
+    background: #141b34;
+    color: white;
+    font-weight: 700;
+}
+
 .green {
     background-color: #5cb85c;
 }
@@ -80,7 +125,8 @@ section span img {
 }
 
 .second { 
-    max-width: 50vw;
+    width: min(1120px, 90vw);
+    max-width: none;
     margin: auto; 
 }
 
@@ -96,7 +142,21 @@ section span img {
 .item-lang{
     font-weight: 700;
     text-align: center;
-    padding-bottom: 36px;
+    padding-bottom: 14px;
+}
+
+.item-description {
+    min-height: 44px;
+    margin-bottom: 16px;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.preview-button:disabled {
+    background: #5cb85c;
+    cursor: not-allowed;
+    opacity: 0.9;
 }
 
 .grid{
@@ -122,5 +182,43 @@ section span img {
 @media screen and (max-width: 1145px) {
     .grid{ 
         grid-template-columns: 1fr; 
+    }
+    .first {
+        margin: 42px auto;
+        width: 90vw;
+    }
+    .first .product-title {
+        font-size: 32px;
+    }
+    nav {
+        gap: 20px;
+        padding: 14px 5vw;
+    }
+    .right ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .brand-mark {
+        font-size: 22px;
+    }
+    .right ul li:not(:last-child) {
+        display: none;
+    }
+    .first p {
+        width: 90vw;
+        font-size: 18px;
+    }
+    .first p.demo-disclaimer {
+        width: 90vw;
+        font-size: 13px;
+    }
+    .download {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
     }
 }
